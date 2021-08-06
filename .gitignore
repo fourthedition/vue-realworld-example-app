@@ -22,4 +22,5 @@ yarn-error.log*
 
 # Coverage Reports
 coverage
-/tests/e2e/videos/*
+*.mp4
+*.png

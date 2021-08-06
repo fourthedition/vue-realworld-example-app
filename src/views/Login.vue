@@ -19,6 +19,7 @@
                 type="text"
                 v-model="email"
                 placeholder="Email"
+                data-test="email"
               />
             </fieldset>
             <fieldset class="form-group">
@@ -27,6 +28,7 @@
                 type="password"
                 v-model="password"
                 placeholder="Password"
+                data-test="password"
               />
             </fieldset>
             <button class="btn btn-lg btn-primary pull-xs-right">
