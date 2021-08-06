@@ -13,22 +13,32 @@ describe("#/login", () => {
     cy.get("form")
       .contains("Sign in")
       .click();
-    cy.get("ul.error-messages");
-    // .should('contain','email or password is invalid')  // กรณีข้อมูลแสดงผลออกมา
+    cy.get("ul.error-messages").should(
+      "contain",
+      "email or password is invalid"
+    ); // กรณีข้อมูลแสดงผลออกมา
+    // assert.isOk('everything',)
   });
   it("Requires Password", () => {
     cy.get("[data-test=email]").type("fourth@example.com{enter}");
-    cy.get("ul.error-messages");
-    // .should('contain','email or password is invalid')  // กรณีข้อมูลแสดงผลออกมา
+    cy.get("ul.error-messages").should(
+      "contain",
+      "email or password is invalid"
+    ); // กรณีข้อมูลแสดงผลออกมา
+    // assert.isOk('everything')
   });
   it("Required valid Username and password", () => {
     cy.get("[data-test=email]").type("fourth@example.com");
-    cy.get("[data-test=password]").type("fourth1234{enter}");
-    // .should('contain','email or password is invalid')  // กรณีข้อมูลแสดงผลออกมา
+    cy.get("[data-test=password]").type("fourth123{enter}");
+    cy.get("ul.error-messages").should(
+      "contain",
+      "email or password is invalid"
+    ); // กรณีข้อมูลแสดงผลออกมา
+    // assert.isOk('everything')
   });
   it("navigation to #/ on successful login", () => {
     cy.get("[data-test=email]").type("fourth@example.com");
     cy.get("[data-test=password]").type("fourth1234{enter}");
-    // cy.hash().should('eq', '#/')
+    cy.hash().should("eq", "#/");
   });
 });
