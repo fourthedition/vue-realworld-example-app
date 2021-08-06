@@ -9,7 +9,7 @@
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
     "test": "cross-env BABEL_ENV=test jest --coverage",
-    "e2e": "cypress run --record --key ba3d5545-dea5-4775-81e8-f1b77b7a4c0e"
+    "e2e": "cypress run --record --key 36a69adc-7f12-4df6-8dcb-1693760c2f9f"
   },
   "dependencies": {
     "axios": "^0.19.0",
