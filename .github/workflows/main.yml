@@ -13,5 +13,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          serve: yarn serve
-          e2e: npx cypress run --record --key 36a69adc-7f12-4df6-8dcb-1693760c2f9f
+          build: yarn build
+          start: yarn start
