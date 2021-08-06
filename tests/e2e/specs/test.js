@@ -2,6 +2,8 @@
 
 describe("My First Test", () => {
   it("Visits the app root url", () => {
-    cy.visit("/12wsdd");
+    cy.visit("/posts/new"); // 1.
+    cy.get("input.post-title") // 2.
+      .type("My First Post"); // 3.
   });
 });
