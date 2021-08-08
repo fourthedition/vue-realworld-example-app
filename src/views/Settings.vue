@@ -9,6 +9,7 @@
               <fieldset class="form-group">
                 <input
                   class="form-control"
+                  id="pictureURL"
                   type="text"
                   v-model="currentUser.image"
                   placeholder="URL of profile picture"
@@ -17,6 +18,7 @@
               <fieldset class="form-group">
                 <input
                   class="form-control form-control-lg"
+                  id="username1"
                   type="text"
                   v-model="currentUser.username"
                   placeholder="Your username"
@@ -25,6 +27,7 @@
               <fieldset class="form-group">
                 <textarea
                   class="form-control form-control-lg"
+                  id="bio1"
                   rows="8"
                   v-model="currentUser.bio"
                   placeholder="Short bio about you"
@@ -32,6 +35,7 @@
               </fieldset>
               <fieldset class="form-group">
                 <input
+                  id="email1"
                   class="form-control form-control-lg"
                   type="text"
                   v-model="currentUser.email"
@@ -40,13 +44,17 @@
               </fieldset>
               <fieldset class="form-group">
                 <input
+                  id="password1"
                   class="form-control form-control-lg"
                   type="password"
                   v-model="currentUser.password"
                   placeholder="Password"
                 />
               </fieldset>
-              <button class="btn btn-lg btn-primary pull-xs-right">
+              <button
+                class="btn btn-lg btn-primary pull-xs-right"
+                id="updateSetting"
+              >
                 Update Settings
               </button>
             </fieldset>

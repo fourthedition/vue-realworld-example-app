@@ -18,6 +18,7 @@
                 class="form-control form-control-lg"
                 type="text"
                 v-model="username"
+                data-test="username"
                 placeholder="Username"
               />
             </fieldset>
@@ -26,6 +27,7 @@
                 class="form-control form-control-lg"
                 type="text"
                 v-model="email"
+                data-test="email"
                 placeholder="Email"
               />
             </fieldset>
@@ -34,6 +36,7 @@
                 class="form-control form-control-lg"
                 type="password"
                 v-model="password"
+                data-test="password"
                 placeholder="Password"
               />
             </fieldset>

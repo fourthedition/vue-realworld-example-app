@@ -24,20 +24,20 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 Cypress.Commands.add("login", () => {
-  // cy.visit('#/login')
-  // cy.get("[data-test=email]").type("fourth@example.com");
-  // cy.get("[data-test=password]").type("fourth1234{enter}");
-  // cy.hash().should("eq", "#/");
-  cy.request({
-    method: "POST",
-    url: "http://localhost:8080/api/user/login",
-    body: {
-      user: {
-        email: "fourth@example.com",
-        password: "fourth1234"
-      }
-    }
-  }).then(res => {
-    window.localStorage.setItem("jwt", res.body.user.token)
-  })
-})
+  cy.visit("#/login");
+  cy.get("[data-test=email]").type("fourth@example.com");
+  cy.get("[data-test=password]").type("fourth1234{enter}");
+  cy.hash().should("eq", "#/");
+  // cy.request({
+  //   method: "POST",
+  //   url: "http://localhost:8080/api/user/login",
+  //   body: {
+  //     user: {
+  //       email: "fourth@example.com",
+  //       password: "fourth1234"
+  //     }
+  //   }
+  // }).then(res => {
+  //   window.localStorage.setItem("jwt", res.body.user.token)
+  // })
+});
